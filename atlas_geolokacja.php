@@ -148,7 +148,8 @@ class PDOClass{
 				 try
 						   {
 							   
-							  $pdo = new PDO('mysql:host='.$this->mysql_host.';dbname='.$this->database.';port='.$this->port, $this->username, $this->password );
+							  $pdo = new PDO('mysql:host='.$this->mysql_host.';dbname='.$this->database.';
+							  port='.$this->port, $this->username, $this->password );
 							  
 							  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 							  $pdo ->query('SET CHARACTER SET utf8');
@@ -186,14 +187,15 @@ class PDOClass{
 				try
 						{
 					
-						$pdo = new PDO('mysql:host='.$this->mysql_host.';dbname='.$this->database.';port='.$this->port, $this->username, $this->password );
+						$pdo = new PDO('mysql:host='.$this->mysql_host.';dbname='.$this->database.';
+						port='.$this->port, $this->username, $this->password );
 						$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 						$pdo ->query('SET CHARACTER SET utf8');
 						$pdo ->query('SET NAMES utf8');
 				
 						$stmt = $pdo -> prepare('UPDATE '.$table.' SET lat = :lat, 
-																	lng = :lng 
-																	WHERE miasto = :miasto'); 
+												lng = :lng 
+												WHERE miasto = :miasto'); 
 						
 						$ilosc = 0;
 						
@@ -205,7 +207,8 @@ class PDOClass{
 									
 										{
 											
-										$stmt -> bindValue(':miasto', $row['miasto'], PDO::PARAM_STR); 
+										$stmt -> bindValue(':miasto', $row['miasto'],
+												   PDO::PARAM_STR); 
 										$stmt -> bindValue(':lat', $row['lat'], PDO::PARAM_STR);
 										$stmt -> bindValue(':lng', $row['lng'], PDO::PARAM_STR);
 										
