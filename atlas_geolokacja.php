@@ -249,11 +249,11 @@ ini_set('max_execution_time', 2000);
 
 $pdo = new PDOClass;
 
-$pdo -> setMysql_host('sql.wyrzykowskikornacki.home.pl'); 
+$pdo -> setMysql_host('yourhost'); 
 $pdo -> setPort('3306'); 
-$pdo -> setUsername('10535339_wieczor');
-$pdo -> setPassword('spinoza2015');
-$pdo -> setDatabase('10535339_wieczor');
+$pdo -> setUsername('yourusername');
+$pdo -> setPassword('yourpassword');
+$pdo -> setDatabase('yourdatabase');
 $tableName = 'citiespoland';
 
 $arrayOfCities = $pdo ->getCitiesNames($tableName);
