@@ -1,5 +1,5 @@
 # atlas-geolokacja
-poniższa aplikacja integruje dane demograficzne (miasto, populacja) z danymi geolokacyjnymi
+Poniższa aplikacja integruje dane demograficzne (miasto, populacja) z danymi geolokacyjnymi
 (szerość i długość geograficzna).
  Dane demograficzne znajdują się w bazie mysql w przykładowej tabeli citiespoland
 kulumny: miasto (text), populacja (int).
